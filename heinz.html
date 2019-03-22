@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <title>HEINZ| BBQ and Hot Dog Adventure</title>
+        <link href="heinz.css" rel="stylesheet"/>
+        
+    </head>
+     <body>
+        <div id="app">
+            
+<!-- Welcome Page-->
+            <div id="welcome">
+                 <img id="welcome-sign" src="svg/sign.svg" alt="sign"/>
+                 <br/>
+                 <button id="start" type="button" onclick="enterGame()">Start</button>   
+            </div>
+            
+<!--Product Hunting -->
+            <div id="room">
+                <img id="bg" src="svg/bg.svg" alt="background"/>
+                <img id="table" src="svg/table.svg" alt="table"/>
+                <audio id="audio">
+                    <source src="music/whiskey-blues.mp3" type="audio/mp3">
+                </audio>
+                
+                <img id="jukebox" src="svg/jukebox.svg" alt="jukebox" onmouseenter="growAndShrink(this); playMusic();" onmouseout="stopAnima(this); stopMusic();" onclick="updateInfo(this.id)"/>
+                
+                <img id="baseball" src="svg/baseball.svg" alt="baseball" onmouseenter="upAndDown(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="sign" src="svg/sign.svg" alt="sign" onmouseenter="rotate(this); imageSwap(this,this.id);" onmouseout="stopAnima(this); imageBack(this, this.id);" onclick="updateInfo(this.id)"/>
+                
+                <img id="hat" src="svg/hat.svg" alt="hat" onmouseenter="rotate(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="flower" src="svg/flower.svg" alt="flower" onmouseenter="growAndShrink(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="bourbon" src="svg/bourbon.svg" alt="bourbon" onmouseenter="rotate(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="hotdog" src="svg/hotdog.svg" alt="hotdog" onmouseenter="upAndDown(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="mount" src="svg/moutain.svg" alt="mountain" onmouseenter="growAndShrink(this)" onmouseout="stopAnima(this)" onclick="updateInfo(this.id)"/>
+                
+                <img id="light" src="svg/lighthouse.svg" alt="lighthouse" onmouseenter="upAndDown(this); imageSwap(this,this.id);" onmouseout="stopAnima(this); imageBack(this, this.id);" onclick="updateInfo(this.id)"/>
+            </div>
+    
+<!--Product Pages-->
+            <div id="products">
+                <button type="button" onclick="closePopUp()">X</button>
+                <img src="svg/carolina-mustard.svg" alt="mustard bbq">
+                <div>
+                    <h2>Carolina Mustard Style Bbq Sauce</h2>
+                    <p>From Columbia to Charleston, South Carolina’s “mustard belt” is where tangy mustard-based barbecue sauce reigns supreme. That’s why Heinz teamed up with South Carolina native Bryan Furman, owner and head pitmaster of the award-winning B’s Cracklin BBQ. From slow-cooked pulled pork to ribs on the grill, this golden sauce delivers the right balance of sweetness and spice that will redefine swine.</p>
+                </div>
+                
+            
+            </div>
+    
+    
+        </div>
+    
+    <script src="heinz.js"></script>
+    </body>
+</html>
